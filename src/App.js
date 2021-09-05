@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import SelectGrade from '../src/Components/SelectGrade/SelectGrade'
 import SelectSubject from '../src/Components/SelectSubject/SelectSubject'
+import Subject from '../src/Components/Subject/Subject'
 
 function App() {
   return (
@@ -14,12 +15,12 @@ function App() {
           <Route path="/select-grade">
             <SelectGrade />
           </Route>
-          <Route exact path='/select-subject'>
-            <SelectSubject />
+          <Route path='/select-subject'>
+            <SelectSubject Name='Physics'/>
           </Route>
-          {/* <Route exact path='/:subject'>
+          <Route path='/:subject/'>
             <Subject />
-          </Route>  */}
+          </Route>
         </Switch> 
       </div>
     </Router>

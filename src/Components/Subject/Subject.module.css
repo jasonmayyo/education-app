@@ -1,0 +1,100 @@
+.SelectGradePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #E8EBF0;
+    padding-bottom: 50px;
+}
+
+.Title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 72px;
+    margin-bottom: 0px;
+    width: 700px;
+    text-align: left;
+    padding-left: 15px;
+    width: 40%;
+}
+
+.SubHeading {
+    width: 40%;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.376);
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 50px;
+    padding-left: 15px;
+}
+
+.CourseContent {
+    width: 100%;
+    font-size: 30px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.ContentListContainer {
+    width: 40%;
+}
+
+
+
+
+.LessonContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 60px;
+    margin-bottom: 20px;
+    border: 1px solid red;
+}
+
+.LessonNumber {
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    color: rgba(0, 0, 0, 0.185);
+    font-weight: 700;
+    margin: 0px;
+    width: 80px;
+}
+
+.LessonTitleContainer {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding-left: 30px;
+}
+
+.LessonTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0px;
+    margin-top: -5px;
+}
+
+.LessonTime{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.24);
+}
+
+.PlayButton {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+.Section:hover, button:hover, .SectionTitleContainer:hover {
+    cursor: pointer;
+}
+

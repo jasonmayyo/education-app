@@ -3,13 +3,13 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: calc(100vh - 60px);
     background-color: #E8EBF0;
+    padding-bottom: 50px;
 }
 
 .Title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 72px;
 }
 
