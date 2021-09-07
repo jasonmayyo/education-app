@@ -1,3 +1,24 @@
+.Module {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(128, 128, 128, 0.116);
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.showModule {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(128, 128, 128, 0.116);
+    margin-bottom: 15px;
+}
+
 .SectionTitleContainer {
     display: flex;
     flex-direction: row;
@@ -9,30 +30,6 @@
     padding-right: 40px;
 }
 
-.Section {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 4px 4px 10px rgba(128, 128, 128, 0.116);
-    margin-bottom: 15px;
-    max-height: 85px;
-    overflow: hidden;
-    flex-wrap: wrap;
-}
-
-.showSection {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    max-height: 100%;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 4px 4px 10px rgba(128, 128, 128, 0.116);
-    margin-bottom: 15px;
-}
-
 .SectionTitle {
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
@@ -41,37 +38,34 @@
     padding: 0px;
 }
 
-.SectionContent {
+.HideModuleContent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     max-height: 0px;
     overflow: hidden;
-    transition: all 0.2s;
+    align-content: flex-start;
+    transition: all 0.2s ease;
 }
 
-.ShowSectionContent {
+.ShowModuleContent{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     max-height: 900px;
+    overflow: hidden;
     align-content: flex-start;
-    transition: all 0.4s;
+    transition: all 0.5s ease;
 }
 
-.Subjects {
-    font-family: 'Poppins', sans-serif;
-    margin: 0px;
-    padding: 0px;
-    margin-top: -15px;
-    padding-left: 5px;
-    color: #00000038;
-}
 
-.ShowContentContanier {
+.ShowContentButtonContanier {
     display: flex;
     align-items: center;
     height: 100%;
 }
 
-.ShowContent {
+.ShowContentButton {
     outline: none;
     background-color: transparent;
     border: none;
@@ -82,11 +76,11 @@
 .ArrowDown {
     width: 30px;
     height: 30px;
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
 }
 
 .ArrowUp {
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
     width: 30px;
     height: 30px;
     transform: rotate(180deg)

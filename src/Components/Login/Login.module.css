@@ -1,0 +1,77 @@
+.LoginPage {
+    display: flex;
+}
+
+.WavesContainer {
+    height: 100vh;
+    width: 20%;
+}
+
+.Waves {
+    height: 100%;
+}
+
+.Background {
+    background-color: #812A39;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Teacher {
+    width: 70%;
+    height: 100%;
+}
+
+.LoginFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100vh;
+}
+
+.SchoolLogo {
+    width: 109px;
+    height: 143px;
+    margin-top: 50px;
+}
+
+.LoginTitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    padding: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+    text-align: center;
+}
+
+.LoginButton {
+    width: 322px;
+    height: 73px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #103872;
+    outline: none;
+    border: none;
+}
+
+.GoogleLogo {
+    width: 36px;
+    height: 36px;
+}
+
+.LoginButtonText {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 18px;
+    padding-left: 20px;
+    font-weight: 600;
+}
+

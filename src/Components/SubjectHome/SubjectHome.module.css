@@ -1,0 +1,49 @@
+.SelectGradePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #E8EBF0;
+    padding-bottom: 50px;
+}
+
+.Title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 72px;
+    margin-bottom: 0px;
+    width: 700px;
+    text-align: left;
+    padding-left: 15px;
+    width: 40%;
+}
+
+.SubHeading {
+    width: 40%;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.376);
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 50px;
+    padding-left: 15px;
+}
+
+.CourseContent {
+    width: 100%;
+    font-size: 30px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.ContentListContainer {
+    width: 40%;
+}
+
+
+
+.Section:hover, button:hover, .SectionTitleContainer:hover {
+    cursor: pointer;
+}
+
