@@ -30,6 +30,7 @@
 
 .CourseContent {
     width: 100%;
+    font-family: 'Poppins', sans-serif;
     font-size: 30px;
     padding: 0px;
     margin: 0px;
@@ -47,3 +48,43 @@
     cursor: pointer;
 }
 
+@media only screen and (max-width: 1024px) {
+    .Title, .SubHeading, .ContentListContainer {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .Title, .SubHeading, .ContentListContainer {
+        width: 90%;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .Title {
+        font-size: 42px;
+        padding-left: 20px;
+        width: 100%;
+    }
+
+    .SubHeading {
+        width: 100%;
+        padding-left: 20px;
+        margin-bottom: 30px;
+    }
+
+    .ContentListContainer {
+        width: 100%;
+    }
+
+    .ModuleListContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .CourseContent {
+        margin-bottom: 10px;
+    }
+}

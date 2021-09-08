@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './LessonHome.module.css'
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player/lazy'
 
 const Classes = () => {
     return(

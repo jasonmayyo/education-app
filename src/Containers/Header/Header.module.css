@@ -24,8 +24,20 @@
     border-radius: 50px;
     color: white;
     font-size: 18px;
+    border: none;
+    outline: none;
 }
 
 .Button:hover {
     cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+    .Logo {
+        margin-left: 20px;
+    } 
+
+    .Button {
+        margin-right: 20px;
+    }
 }

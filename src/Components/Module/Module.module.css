@@ -92,3 +92,36 @@
     color: #812A39;
     font-weight: 600;
 }
+
+
+.Section:hover, button:hover, .SectionTitleContainer:hover {
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    .Module {
+        width: 97%;
+        margin-bottom: 10px;
+    }
+
+    .showModule {
+        width: 97%;
+    }
+
+    .SectionTitle {
+        font-size: 28px;
+    }
+
+    .ShowContentText {
+        display: none;
+    }
+
+    .SectionTitleContainer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+   
+}

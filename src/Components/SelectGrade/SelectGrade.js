@@ -7,6 +7,8 @@ const SelectGrade = (props) => {
         <div className={classes.SelectGradePage}>
             <h1 className={classes.Title}>Select Your Grade...</h1>
             <div className={classes.GradeListContainer}>
+                <Grade Grade={props.Grade}/>
+                <Grade Grade={props.Grade}/>        
                 <Grade Grade={props.Grade}/>        
             </div>
         </div>

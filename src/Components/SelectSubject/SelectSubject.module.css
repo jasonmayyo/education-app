@@ -24,3 +24,33 @@
 .Grade:hover {
     cursor: pointer;
 }
+
+
+@media only screen and (max-width: 1024px) {
+    .GradeListContainer {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .GradeListContainer {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .GradeListContainer {
+        width: 95%;
+    }
+
+    .Title {
+        font-weight: 500;
+        font-size: 52px;
+        margin: 5px;
+        line-height: 60px;
+        padding-bottom: 40px;
+        padding-top: 20px;
+        text-align: center;
+    }
+}
+

@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './Grade.module.css'
 import {Link} from 'react-router-dom'
-import Shevron from '../../Assests/Right-shevron.png'
+import Shevron from '../../Assests/Right-shevron.svg'
 
 const Grade = (props) => {
     return (

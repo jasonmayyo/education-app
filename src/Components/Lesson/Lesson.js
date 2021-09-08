@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 const Lesson = (props) => {
     return(
-        <Link to={`/${props.Grade}/${props.Subject}/${props.Lesson}`}style={{textDecoration: 'none', color: 'black', width: '85%'}}>
+        <Link to={`/${props.Grade}/${props.Subject}/${props.Lesson}`} className={classes.LinkContanier}>
             <div className={classes.LessonContainer}>
                 <p className={classes.LessonNumber}>01</p>
                 <div className={classes.LessonTitleContainer}>

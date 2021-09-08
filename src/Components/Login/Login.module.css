@@ -11,6 +11,10 @@
     height: 100%;
 }
 
+.WavesMobile {
+    display: none;
+}
+
 .Background {
     background-color: #812A39;
     width: 40%;
@@ -31,7 +35,6 @@
     align-items: center;
     justify-content: center;
     width: 40%;
-    height: 100vh;
 }
 
 .SchoolLogo {
@@ -75,3 +78,59 @@
     font-weight: 600;
 }
 
+@media only screen and (max-width: 1024px) {
+
+    .LoginPage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-image: url('../../Assests/waves-mobile.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .WavesContainer {
+        display: none;
+    }
+
+    .SchoolLogo {
+        margin-top: 0px;
+    }
+
+    .LoginTitle {
+        padding-left: 50px;
+        padding-right: 50px;
+        color: white;
+        font-size: 24px;
+    }
+
+    .LoginButtonText {
+        font-size: 15px;
+    }
+
+    .GoogleLogo {
+        width: 25px;
+        height: 25px;
+    }
+
+    .LoginButton {
+        width: 280px;
+        height: 63px;
+    }
+ 
+    .LoginFormContainer {
+        width: 100%;
+        margin-top: 10vh;
+    }
+
+    
+
+    .Background {
+        display: none;
+    }
+
+
+}

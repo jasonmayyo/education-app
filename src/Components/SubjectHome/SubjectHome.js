@@ -9,10 +9,11 @@ const Subject = (props) => {
             <p className={classes.SubHeading}>Teacher: Mrs Allway</p>
             <div className={classes.ContentListContainer}>
                 <p className={classes.CourseContent}>Course Content:</p>
-                <Module Grade={props.Grade} Subject={props.Subject} Lesson={props.Lesson}/>
-                <Module />
-                <Module />
-                
+                <div className={classes.ModuleListContainer}>
+                    <Module Grade={props.Grade} Subject={props.Subject} Lesson={props.Lesson}/>
+                    <Module />
+                    <Module />
+                </div>
             </div>
         </div>
     )
