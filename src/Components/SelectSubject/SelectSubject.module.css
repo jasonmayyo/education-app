@@ -13,6 +13,14 @@
     font-size: 72px;
 }
 
+.GradeTitle {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 72px;
+    padding: 0px;
+    margin: 0px;
+}
+
 .GradeListContainer {
     width: 40%;
 }
@@ -48,9 +56,19 @@
         font-size: 52px;
         margin: 5px;
         line-height: 60px;
-        padding-bottom: 40px;
+        padding-bottom: 15px;
         padding-top: 20px;
-        text-align: center;
+        padding-left: 10px;
+        text-align: left;
     }
+
+    .GradeTitle {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 58px;
+        padding: 0px;
+        margin: 0px;
+    }
+
 }
 

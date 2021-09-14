@@ -5,15 +5,17 @@ import Shevron from '../../Assests/Right-shevron.svg'
 
 const Subject = (props) => {
     return(
-        <Link to={`/${props.Grade}/${props.Subject}`} style={{ textDecoration: 'none', color: 'black' }}>
-            <div className={classes.Grade}>
-                <div className={classes.GradeTitleContainer}>
-                    <p className={classes.GradeTitle}>Maths</p>
-                    <p className={classes.Subjects}>Teacher: Mr King</p>
+        props.Subjects.map( Subject => (
+            <Link to={`/${props.Grade}/${Subject.Subject}`} style={{ textDecoration: 'none', color: 'black' }}>
+                <div className={classes.Grade} onClick={() => props.setSubject(Subject.Subject, Subject.Teacher)}>
+                    <div className={classes.GradeTitleContainer}>
+                        <p className={classes.GradeTitle}>{Subject.Subject}</p>
+                        <p className={classes.Subjects}>Teacher: {Subject.Teacher}</p>
+                    </div>
+                    <img src={Shevron} alt='SELECT' className={classes.Shevron}/>
                 </div>
-                <img src={Shevron} alt='SELECT' className={classes.Shevron}/>
-            </div>
-        </Link>
+            </Link>
+        )) 
     )
 }
 

@@ -58,11 +58,14 @@
     }
 
     .GradeTitle {
-        padding-left: 20px;
+        padding-left: 10px;
+        font-size: 30px;
+        margin-top: 0px;
     }
 
     .Subjects {
-        padding-left: 25px;
+        padding-left: 10px;
+        margin-top: 0px;
     }
 
     .Shevron {

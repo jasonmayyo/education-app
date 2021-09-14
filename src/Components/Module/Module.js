@@ -1,32 +1,39 @@
-import React, {useState} from 'react'
+import React, {Component} from 'react'
 import classes from './Module.module.css'
 import Lesson from '../Lesson/Lesson'
 import ArrowDown from '../../Assests/arrow-down.svg'
 
-const Module = (props ) => {
+class Module extends Component {
+    state = {
+        showContent: false,
+        ModuleClicked: ''
+    }
 
-    const [showContent, setShowContent] = useState(false)
-
-    return(
-        <div className={showContent ? classes.showModule : classes.Module}>
-            <div className={classes.SectionTitleContainer} onClick={() => setShowContent(!showContent)}>
-                <p className={classes.SectionTitle}>Current Electricty</p>
-                <div className={classes.ShowContentButtonContanier}>
-                    <button className={classes.ShowContentButton} onClick={() => setShowContent(!showContent)}>
-                        <img src={ArrowDown} alt='arrowDown' className={showContent ? classes.ArrowUp : classes.ArrowDown}/>
-                        <p className={classes.ShowContentText}>{showContent ? "COLLAPES" : 'EXPAND'}</p>
-                    </button>
+    render() {
+        return(
+            this.props.Modules.map( (module, index) => (
+                <div className={module.Show ? classes.showModule : classes.Module} key={module.Title}>
+                <div className={classes.SectionTitleContainer} onClick={() => module.Show ? this.props.hideContentHandler(index) : this.props.showContentHandler(index)}>
+                    <p className={classes.SectionTitle}>{module.Title}</p>
+                    <div className={classes.ShowContentButtonContanier}>
+                        <button className={classes.ShowContentButton} onClick={() => module.Show ? this.props.hideContentHandler(index) : this.props.showContentHandler(index)}>
+                            <img src={ArrowDown} alt='arrowDown' className={module.Show ? classes.ArrowUp : classes.ArrowDown}/>
+                            <p className={classes.ShowContentText}>{module.Show ? "COLLAPES" : 'EXPAND'}</p>
+                        </button>
+                    </div>
                 </div>
+                <div className={module.Show ? classes.ShowModuleContent : classes.HideModuleContent}>
+                    <Lesson 
+                        Grade={this.props.Grade} 
+                        Subject={this.props.Subject} 
+                        Lessons={module.Lessons}
+                        selectedLesson={this.props.selectedLesson}
+                    />
+                </div>     
             </div>
-            <div className={showContent ? classes.ShowModuleContent : classes.HideModuleContent}>
-                <Lesson Grade={props.Grade} Subject={props.Subject} Lesson={props.Lesson} />
-                <Lesson Grade={props.Grade} Subject={props.Subject} Lesson={props.Lesson} />
-                <Lesson Grade={props.Grade} Subject={props.Subject} Lesson={props.Lesson} />
-                <Lesson Grade={props.Grade} Subject={props.Subject} Lesson={props.Lesson} />
-                <Lesson Grade={props.Grade} Subject={props.Subject} Lesson={props.Lesson} />
-            </div>     
-        </div>
-    )
+            ))
+        )
+    }
 }
 
 export default Module

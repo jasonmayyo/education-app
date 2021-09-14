@@ -1,22 +1,26 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classes from './Lesson.module.css'
 import PlayButton from '../../Assests/play-button.svg'
 import {Link} from 'react-router-dom'
 
 
-const Lesson = (props) => {
-    return(
-        <Link to={`/${props.Grade}/${props.Subject}/${props.Lesson}`} className={classes.LinkContanier}>
-            <div className={classes.LessonContainer}>
-                <p className={classes.LessonNumber}>01</p>
-                <div className={classes.LessonTitleContainer}>
-                    <p className={classes.LessonTime}>19:20</p>
-                    <p className={classes.LessonTitle}>Circuit Diagrams</p>
-                </div>
-                <img src={PlayButton} alt='Play' className={classes.PlayButton}/>
-            </div>
-        </Link>
-    )
+class Lesson extends Component {
+    render() {
+        return(
+            this.props.Lessons.map( Lesson => (
+                <Link to={`/${this.props.Grade}/${this.props.Subject}/${Lesson.Title}`} className={classes.LinkContanier} onClick={() => this.props.selectedLesson(Lesson)}>
+                    <div className={classes.LessonContainer}>
+                        <p className={classes.LessonNumber}>02</p>
+                        <div className={classes.LessonTitleContainer}>
+                            <p className={classes.LessonTime}>{Lesson.Time}</p>
+                            <p className={classes.LessonTitle}>{Lesson.Title}</p>
+                        </div>
+                        <img src={PlayButton} alt='Play' className={classes.PlayButton}/>
+                    </div>
+                </Link>
+            ))
+        )
+    }
 };
 
 
