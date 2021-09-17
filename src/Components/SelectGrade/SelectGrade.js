@@ -24,7 +24,8 @@ class SelectGrade extends Component {
     render() {
         return(
             <div className={classes.SelectGradePage}>
-                <h1 className={classes.Title}>Select Your <p className={classes.GradeTitle}>Grade...</p></h1>
+                <p className={classes.Welcome}>Welcome {this.props.userName}!</p>
+                <h1 className={classes.Title}>Grades</h1>
                 <div className={classes.GradeListContainer}>
                     <Grade 
                         Grades={this.state.Grades}

@@ -1,0 +1,237 @@
+.DrawerContainer {
+    display: none;
+}
+
+.HideDrawerContainer {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .DrawerContainer {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+        height: 100vh;
+        width: 85%;
+        background-color: white;
+        z-index: 999;
+        position: fixed;
+        right: 15px;
+        top: 0px;
+        transition: all 0.3s;
+    }
+    
+    .HideDrawerContainer {
+        position: fixed;
+        display: flex;
+        right: -100%;
+    }
+
+    .ProfileContainer {
+        display: flex;
+        flex-direction: column;
+        height: 10%;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .Profile {
+        width: 60px;
+        height: 60px;
+    }
+
+    .Welcome {
+        margin: 0px;
+        padding: 0px;
+        font-size: 14px;
+        color: grey;
+        padding-left: 20px;
+    }
+
+    .Name {
+        font-weight: 600;
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Poppins', sans-serif;
+        padding-left: 20px;
+
+    }
+
+    .LinksContainer {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Link {
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .LinkText {
+        width: 90%;
+        background-color: rgba(128, 128, 128, 0.049);
+        height: 50px;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+
+    .LogoutContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 10%;
+        width: 100%;
+    }
+
+    .LogoutButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border: none;
+        width: 90%;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #812A39;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .Logouticon {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .DrawerContainer {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+        height: 100vh;
+        width: 85%;
+        background-color: white;
+        z-index: 999;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        transition: all 0.3s;
+    }
+    
+    .HideDrawerContainer {
+        position: fixed;
+        display: flex;
+        right: -100%;
+    }
+
+    .ProfileContainer {
+        display: flex;
+        flex-direction: column;
+        height: 10%;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .Profile {
+        width: 60px;
+        height: 60px;
+    }
+
+    .Welcome {
+        margin: 0px;
+        padding: 0px;
+        font-size: 14px;
+        color: grey;
+        padding-left: 20px;
+    }
+
+    .Name {
+        font-weight: 600;
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Poppins', sans-serif;
+        padding-left: 20px;
+
+    }
+
+    .LinksContainer {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Link {
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .LinkText {
+        width: 90%;
+        background-color: rgba(128, 128, 128, 0.049);
+        height: 50px;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+
+    .LogoutContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 10%;
+        width: 100%;
+    }
+
+    .LogoutButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border: none;
+        width: 90%;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #812A39;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .Logouticon {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 50px;
+    }
+} 
+

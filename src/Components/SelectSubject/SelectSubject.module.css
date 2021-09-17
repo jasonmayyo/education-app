@@ -5,20 +5,29 @@
     width: 100%;
     background-color: #E8EBF0;
     padding-bottom: 50px;
+    overflow: hidden;
 }
 
 .Title {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 72px;
+    margin-top: 0px;
+    width: 40%;
+    padding: 0px;
 }
 
-.GradeTitle {
-    display: inline-block;
-    font-weight: 600;
-    font-size: 72px;
+.Welcome {
+    font-family: 'Poppins', sans-serif;
     padding: 0px;
     margin: 0px;
+    margin-bottom: -15px;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-left: 20px;
+    text-align: left;
+    width: 40%;
+    color: grey;
 }
 
 .GradeListContainer {
@@ -53,21 +62,26 @@
 
     .Title {
         font-weight: 500;
-        font-size: 52px;
+        font-size: 62px;
         margin: 5px;
         line-height: 60px;
-        padding-bottom: 15px;
-        padding-top: 20px;
-        padding-left: 10px;
+        padding-bottom: 30px;
+        padding-left: 30px;
         text-align: left;
+        width: 100%;       
     }
 
-    .GradeTitle {
-        display: inline-block;
-        font-weight: 700;
-        font-size: 58px;
+    .Welcome {
+        font-family: 'Poppins', sans-serif;
         padding: 0px;
         margin: 0px;
+        margin-bottom: -5px;
+        font-weight: 600;
+        padding-top: 30px;
+        padding-left: 40px;
+        text-align: left;
+        width: 100%;
+        color: grey;
     }
 
 }

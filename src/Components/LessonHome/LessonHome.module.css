@@ -5,6 +5,7 @@
     width: 100%;
     background-color: #E8EBF0;
     padding-bottom: 50px;
+    overflow: hidden;
 }
 
 .Title {
@@ -102,6 +103,7 @@
 
 .LessonBreadcrums {
     padding-top: 5px;
+    color: #812A39;
 }
 
 
@@ -136,8 +138,8 @@
     }
 
     .LessonTitelContainer {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .LessonBreadcrums {

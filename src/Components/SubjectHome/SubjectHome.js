@@ -12,7 +12,7 @@ class Subject extends Component {
 
 
     componentDidMount = () => {
-        db.collection('Grades').doc(this.props.selectedGrade).collection('Subjects').doc(this.props.selectedSubject.Subject).collection('Modules').get()
+        db.collection('Grades').doc(this.props.match.params.grade).collection('Subjects').doc(this.props.match.params.subject).collection('Modules').get()
         .then( snapshot => {
             snapshot.forEach( doc => {
                 const module = doc.data()
@@ -24,6 +24,7 @@ class Subject extends Component {
                 console.log(Subjects)
             })
         })
+        console.log(this.props.match.params.subject)
     }
 
     showContentHandler = (index) => {

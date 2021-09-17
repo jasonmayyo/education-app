@@ -5,6 +5,7 @@
     width: 100%;
     background-color: #E8EBF0;
     padding-bottom: 50px;
+    overflow: hidden;
 }
 
 .Title {
@@ -75,7 +76,7 @@
     }
 
     .ContentListContainer {
-        width: 100%;
+        width: 97%;
     }
 
     .ModuleListContainer {

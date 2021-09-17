@@ -7,16 +7,35 @@ import SelectGrade from '../src/Components/SelectGrade/SelectGrade'
 import SelectSubject from '../src/Components/SelectSubject/SelectSubject'
 import SubjectHome from '../src/Components/SubjectHome/SubjectHome'
 import LessonHome from '../src/Components/LessonHome/LessonHome'
+import Drawer from '../src/Containers/Drawer/Drawer'
+import BackDrop from '../src/Containers/BackDrop/BackDrop'
 import React,{ Component } from 'react';
+import LoadingPage from '../src/Containers/LoadingScreen/LoadingScreen'
+
+import {auth} from '../src/Utils/firebase'
+import {provider} from '../src/Utils/firebase'
 
 class App extends Component {
   state = {
     selectedGrade: '',
     selectedSubject: {
-      Subject: 'Physical Science',
-      Teacher: 'Mr umm'
+      Subject: 'State not updated',
+      Teacher: '...',
+      URL: ''
     },
     selectedLesson: '',
+    user: null,
+    showDrawer: false,
+    loading: true
+  }
+
+  componentDidMount = () => {
+    auth.onAuthStateChanged((user) => { 
+      this.setState({
+        user: user,
+        loading: false
+      })
+    })
   }
 
   setGradeHandler = (selectedGrade) => {
@@ -25,10 +44,11 @@ class App extends Component {
     })
   }
 
-  setSubjectHandler = (selectedSubject, Teacher) => {
+  setSubjectHandler = (selectedSubject, Teacher, URL) => {
     const updatedselectedSubject = {...this.state.selectedSubject}
     updatedselectedSubject.Subject = selectedSubject
     updatedselectedSubject.Teacher = Teacher
+    updatedselectedSubject.URL = URL
     this.setState({
        selectedSubject: updatedselectedSubject
     })
@@ -39,38 +59,79 @@ class App extends Component {
       selectedLesson: Lesson
     })
   }
+
+  setDrawer = () => {
+    this.setState({
+      showDrawer: !this.state.showDrawer
+    })
+  }
+
+  signInWithGoogle = () => {
+    auth.signInWithPopup(provider)
+      .then(result => {
+        console.log(result.credential)
+      })
+      .catch(e => {
+        console.log(e)
+      })
+  }
+
+  Logout = () => {
+    auth.signOut()
+  }
   
   render( ) {
-    const Lesson = 'electrostatics'
-
     return (
       <Router>
         <Switch>
-          <Route exact path='/login'>
-              <Login />
-          </Route>
+          {this.state.loading ? 
           <Route path='/'>
+            <LoadingPage />
+          </Route> :
+          <Route path='/'>
+            {this.state.user ?  
             <div className='App'>
-                  <Header />
+                  <Header 
+                    selectedGrade={this.state.selectedGrade}
+                    setDrawer={this.setDrawer}
+                    Logout={this.Logout}
+                  />
+                  <Drawer 
+                    showDrawer={this.state.showDrawer}
+                    setDrawer={this.setDrawer}
+                    selectedGrade={this.state.selectedGrade}
+                    Logout={this.Logout}
+                    userName={this.state.user.displayName}
+                  />
+                  <BackDrop
+                    showDrawer={this.state.showDrawer}
+                    setDrawer={this.setDrawer} 
+                  />
                     <Switch>
                       <Route exact path="/select-grade">
                           <SelectGrade  
+                            userName={this.state.user.displayName}
                             setGrade={this.setGradeHandler}
                           />
                       </Route>
-                      <Route exact path='/:grade/select-subject'>
+                      <Route exact path='/:grade/select-subject' render={(props) => 
                           <SelectSubject 
+                            {...props}
                             selectedGrade={this.state.selectedGrade}
+                            setSelectedGrade={this.setGradeHandler}
                             setSubject={this.setSubjectHandler}
-                          />
+                          />}>
+                          
                       </Route>
-                      <Route exact path='/:grade/:subject/'>
-                          <SubjectHome
+                      <Route exact path='/:grade/:subject/' render={(props) => 
+                        <SubjectHome
+                            {...props}
                             selectedGrade={this.state.selectedGrade}
                             selectedSubject={this.state.selectedSubject}
-                            Lesson={Lesson}
+                            Lesson={this.state.selectedLesson}
                             selectedLesson={this.setSelectedLessonHandler}
-                          />
+                        />}>
+                          
                       </Route>
                       <Route exact path='/:grade/:subject/:lesson/'>
                           <LessonHome 
@@ -79,9 +140,12 @@ class App extends Component {
                             selectedSubject={this.state.selectedSubject}
                           />
                       </Route>
+                      
                     </Switch>
-              </div>
-          </Route>
+              </div> :
+                <Login signin={this.signInWithGoogle}/>
+  }
+          </Route>}
         </Switch>
       </Router>
       

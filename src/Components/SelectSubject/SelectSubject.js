@@ -9,7 +9,7 @@ class SelectSubject extends Component {
     }
 
     componentDidMount = () => {
-        db.collection('Grades').doc(this.props.selectedGrade).collection('Subjects').get()
+        db.collection('Grades').doc(this.props.match.params.grade).collection('Subjects').get()
         .then( snapshot => {
             snapshot.forEach( doc => {
                 const Subject = doc.data()
@@ -17,17 +17,16 @@ class SelectSubject extends Component {
                 this.setState({
                     Subjects: updatedSubjects
                 })
-                console.log(updatedSubjects)
             })
         })
-        .catch(e => console.log(e))
+        .catch((e) => console.log(e))
     }
 
     render() {
         return(
-            
             <div className={classes.SelectGradePage}>
-                <h1 className={classes.Title}>Select a <p className={classes.GradeTitle}>Subject...</p></h1>
+                <p className={classes.Welcome}>Grade: {this.props.selectedGrade}</p>
+                <h1 className={classes.Title}>Subjects</h1>
                 <div className={classes.GradeListContainer}>
                     <Subject 
                         Grade={this.props.selectedGrade} 
