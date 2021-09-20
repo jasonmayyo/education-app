@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import Login from '../src/Components/Login/Login'
 
 import Header from '../src/Containers/Header/Header'
@@ -89,8 +89,9 @@ class App extends Component {
             <LoadingPage />
           </Route> :
           <Route path='/'>
-            {this.state.user ?  
+            {this.state.user ?
             <div className='App'>
+                <Redirect to='/select-grade'/>  
                   <Header 
                     selectedGrade={this.state.selectedGrade}
                     setDrawer={this.setDrawer}
@@ -131,7 +132,6 @@ class App extends Component {
                             Lesson={this.state.selectedLesson}
                             selectedLesson={this.setSelectedLessonHandler}
                         />}>
-                          
                       </Route>
                       <Route exact path='/:grade/:subject/:lesson/'>
                           <LessonHome 
@@ -140,11 +140,10 @@ class App extends Component {
                             selectedSubject={this.state.selectedSubject}
                           />
                       </Route>
-                      
                     </Switch>
               </div> :
                 <Login signin={this.signInWithGoogle}/>
-  }
+            }
           </Route>}
         </Switch>
       </Router>

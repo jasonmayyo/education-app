@@ -32,7 +32,7 @@
 
 .LessonTitle {
     font-family: 'Poppins', sans-serif;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 600;
     margin: 0px;
     margin-top: -5px;
@@ -70,7 +70,7 @@
     }
 
     .LessonTitle {
-        font-size: 20px;
+        font-size: 13px;
     }
 
     .LessonNumber {
@@ -78,7 +78,42 @@
     }
 
     .LessonTime {
-        font-size: 14px;
+        font-size: 10px;
+    }
+
+    .PlayButton {
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .LinkContanier {
+        width: 100%;
+    }
+
+    .LessonContainer {
+        width: 100%;
+        padding: 0px;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .LessonTitleContainer {
+        padding-left: 5px;
+        width: 75%;
+    }
+
+    .LessonTitle {
+        font-size: 13px;
+    }
+
+    .LessonNumber {
+        display: none;
+    }
+
+    .LessonTime {
+        font-size: 10px;
     }
 
     .PlayButton {
