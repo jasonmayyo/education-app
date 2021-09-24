@@ -2,10 +2,12 @@ import React, { Component } from 'react'
 import classes from './SelectSubject.module.css'
 import Subject from '../Subject/Subject'
 import {db} from '../../Utils/firebase'
+import LoadingSubjects from '../Grade/LoadingGrade/LoadingGrade'
 
 class SelectSubject extends Component {
     state = {
-        Subjects: []
+        Subjects: [],
+        Loading: true
     }
 
     componentDidMount = () => {
@@ -15,7 +17,8 @@ class SelectSubject extends Component {
                 const Subject = doc.data()
                 const updatedSubjects = [...this.state.Subjects, Subject]
                 this.setState({
-                    Subjects: updatedSubjects
+                    Subjects: updatedSubjects,
+                    Loading: false
                 })
             })
         })
@@ -28,11 +31,15 @@ class SelectSubject extends Component {
                 <p className={classes.Welcome}>Grade: {this.props.selectedGrade}</p>
                 <h1 className={classes.Title}>Subjects</h1>
                 <div className={classes.GradeListContainer}>
-                    <Subject 
-                        Grade={this.props.selectedGrade} 
-                        Subjects={this.state.Subjects}
-                        setSubject={this.props.setSubject}
-                    />
+                    {this.state.Loading ? 
+                        <LoadingSubjects />
+                        :
+                        <Subject 
+                            Grade={this.props.selectedGrade} 
+                            Subjects={this.state.Subjects}
+                            setSubject={this.props.setSubject}
+                        /> 
+                    }
                 </div>
             </div>
         )

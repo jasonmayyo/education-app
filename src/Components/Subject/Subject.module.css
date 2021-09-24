@@ -83,3 +83,19 @@
     }
 
 }
+
+
+
+@media only screen and (max-width: 370px) {
+    .GradeTitle {
+        font-size: 25px;
+    }
+
+    .GradeTitle {
+        padding-left: 10px;
+    }
+
+    .Subjects {
+        padding-left: 10px;
+    }
+}

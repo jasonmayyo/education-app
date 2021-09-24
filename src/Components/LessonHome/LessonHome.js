@@ -1,6 +1,5 @@
 import React from 'react'
 import classes from './LessonHome.module.css'
-import ReactPlayer from 'react-player/lazy'
 import {Link} from 'react-router-dom'
 
 const Classes = (props) => {
@@ -13,13 +12,20 @@ const Classes = (props) => {
                 <p className={classes.LessonBreadcrums} > 
                     <Link to='/select-grade' style={{ textDecoration: 'none', color: '#812A39' }}>Grade {props.selectedGrade}</Link>/ 
                     <Link to={`/${props.selectedGrade}/select-subject`} style={{ textDecoration: 'none', color: '#812A39' }}>{props.selectedSubject.Subject}</Link>/
-                    <Link to={`/${props.selectedGrade}/select-subject`} style={{ textDecoration: 'none', color: '#812A39' }}>Module</Link>/
                     <Link to={`/${props.selectedGrade}/select-subject`} style={{ textDecoration: 'none', color: '#812A39' }}>{props.selectedLesson.Title}</Link>
                 </p>
             </div>
             <div className={classes.VideoContainer}>
-                <ReactPlayer  width='100%' height='100%' url={props.selectedLesson.VideoURL}/>
+                <iframe src={props.selectedLesson.VideoURL}
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture" 
+                    allowfullscreen
+                    title={props.selectedLesson.Title}>
+                </iframe>
             </div>
+                
             <div className={classes.LessonSummaryContainer}>
                 <h1 className={classes.LessonSummaryTitle}>Lesson Summary</h1>
                 <div className={classes.LessonSummaryContent}>

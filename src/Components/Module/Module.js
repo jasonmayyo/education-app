@@ -30,7 +30,7 @@ class Module extends Component {
                         selectedLesson={this.props.selectedLesson}
                     />
                 </div>     
-            </div>
+                </div>
             ))
         )
     }
