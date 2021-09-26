@@ -16,6 +16,9 @@
     border-radius: 20px;
     box-shadow: 4px 4px 10px rgba(128, 128, 128, 0.116);
     margin-bottom: 15px;
+
+    position: relative;
+    overflow: hidden;
 }
 
 .GradeTitle {
@@ -23,12 +26,14 @@
     height: 50px;
     background-color: rgba(128, 128, 128, 0.250);
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .Subjects {
     width: 60%;
     height: 20px;
     background-color: rgba(128, 128, 128, 0.250);
+    border-radius: 5px;
 }
 
 
