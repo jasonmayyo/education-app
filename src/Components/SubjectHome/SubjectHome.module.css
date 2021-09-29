@@ -87,6 +87,7 @@
 
     .CourseContent {
         margin-bottom: 10px;
+        font-size: 20px;
     }
 }
 
@@ -94,5 +95,9 @@
 @media only screen and (max-width: 370px) {
     .Title {
         font-size: 35px;
+    }
+
+    .CourseContent {
+        font-size: 20px;
     }
 }

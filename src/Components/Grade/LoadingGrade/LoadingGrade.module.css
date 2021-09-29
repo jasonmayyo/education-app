@@ -4,6 +4,10 @@
     justify-content: center;
     width: 80%;
     height: 100%;
+
+
+    position: relative;
+    overflow: hidden;
 }
 
 .Grade {
