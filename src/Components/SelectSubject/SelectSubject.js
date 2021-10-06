@@ -29,7 +29,7 @@ class SelectSubject extends Component {
         return(
             <div className={classes.SelectGradePage}>
                 <p className={classes.Welcome}>Grade: {this.props.selectedGrade}</p>
-                <h1 className={classes.Title}>Subjects</h1>
+                <h1 className={classes.Title}>SUBJECTS</h1>
                 <div className={classes.GradeListContainer}>
                     {this.state.Loading ? 
                         <LoadingSubjects />

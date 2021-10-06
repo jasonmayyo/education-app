@@ -1,6 +1,9 @@
 import React from 'react'
 import classes from './LessonHome.module.css'
 import {Link} from 'react-router-dom'
+import LessonNotes from '../../Assests/lessonnotes.svg'
+import Worksheet from '../../Assests/Worksheet.svg'
+import Memo from '../../Assests/Memo.svg'
 
 const Classes = (props) => {
     return(
@@ -27,21 +30,33 @@ const Classes = (props) => {
             </div>
                 
             <div className={classes.LessonSummaryContainer}>
-                <h1 className={classes.LessonSummaryTitle}>Lesson Summary</h1>
-                <div className={classes.LessonSummaryContent}>
-                    <div className={classes.LessonSummaryContentContainer}>
-                        <p className={classes.LessonContentHeading}>Topic:</p>
-                        <p className={classes.LessonContentSubheading}>{props.selectedLesson.Title}</p>
-                        <p className={classes.LessonContentHeading}>Teacher:</p>
-                        <p className={classes.LessonContentSubheading}>{props.selectedSubject.Teacher}</p>
+                <h1>Documents</h1>
+                    <div className={classes.DocsLinkContanier}>
+                        <a  className={classes.DocsLink} rel="noreferrer"  href='https://seventhstar.co.za/wp-content/uploads/2020/06/LD-GR11S-Electrostatics-Charge-and-Coulombs-Law-of-Elctrostatics.pdf' 
+                            target='_blank'>
+                            <div className={classes.DocsButton}>
+                                <img src={LessonNotes} alt='' className={classes.Docimg}/>
+                                <h1 className={classes.DocTitle}>Lesson Notes</h1>
+                                <h3 className={classes.DocType}>PDF</h3>
+                            </div>
+                        </a>
+                        <a  className={classes.DocsLink} rel="noreferrer"  href='https://seventhstar.co.za/wp-content/uploads/2020/06/LD-GR11S-Electrostatics-Charge-and-Coulombs-Law-of-Elctrostatics.pdf' 
+                            target='_blank'>
+                            <div className={classes.DocsButton}>
+                                <img src={Worksheet} alt='' className={classes.Docimg}/>
+                                <h1 className={classes.DocTitle}>Worksheet</h1>
+                                <h3 className={classes.DocType}>PDF</h3>
+                            </div>
+                        </a>
+                        <a  className={classes.DocsLink} rel="noreferrer"  href='https://seventhstar.co.za/wp-content/uploads/2020/06/LD-GR11S-Electrostatics-Charge-and-Coulombs-Law-of-Elctrostatics.pdf' 
+                            target='_blank'>
+                            <div className={classes.DocsButton}>
+                                <img src={Memo} alt='' className={classes.Docimg}/>
+                                <h1 className={classes.DocTitle}>Memo</h1>
+                                <h3 className={classes.DocType}>PDF</h3>
+                            </div>
+                        </a>
                     </div>
-                    <div className={classes.LessonSummaryContentContainer}>
-                        <p className={classes.LessonContentHeading}>Subject:</p>
-                        <p className={classes.LessonContentSubheading}>{props.selectedSubject.Subject}</p>
-                        <p className={classes.LessonContentHeading}>Grade:</p>
-                        <p className={classes.LessonContentSubheading}>{props.selectedGrade}</p>
-                    </div>
-                </div>
             </div>
         </div>
     )

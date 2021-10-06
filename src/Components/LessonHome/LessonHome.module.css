@@ -59,11 +59,65 @@
 }
 
 .LessonSummaryContainer {
+    display: flex;
+    flex-direction: column;
     width: 40%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.DocsLinkContanier {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 100%;
+    overflow: scroll;
+}
+
+.DocsLink {
+    text-decoration: none;
+    color: white;
     height: 300px;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.DocsButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
     background-color: white;
-    border-radius: 20px;
-    box-shadow: 4px 4px 10px rgba(128, 128, 128, 0.116);
+}
+
+
+.Docimg {
+    width: 150px;
+    height: 150px;
+    transition: all 0.4s ease;
+}
+
+.DocsButton:hover .Docimg {
+    transform: translateY(-20px);
+}
+
+.DocTitle {
+    font-size: 25px;
+    padding-top: 10px;
+    margin: 0px;
+    color: black;
+}
+
+.DocType {
+    font-weight: 500;
+    margin: 0px;
+    color: black;
 }
 
 .LessonSummaryTitle {
@@ -77,32 +131,6 @@
     justify-content: space-around;
 }
 
-
-.LessonSummaryContentContainer {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.LessonContentHeading {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    padding-bottom: 5px;
-    padding-top: 10px;
-}
-
-.LessonContentSubheading {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.445);
-}
-
-.LessonContentHeading, .LessonContentSubheading {
-    margin: 0px;
-    padding-left: 100px;
-}
  
 .LessonTitle,
 .LessonBreadcrums {
@@ -116,14 +144,21 @@
 
 
 @media only screen and (max-width: 1024px) {
-    .Title, .SubHeading, .LessonTitelContainer, .VideoContainer, .LessonSummaryContainer {
+    .Title, .SubHeading, .LessonTitelContainer, .VideoContainer, .LessonSummaryContainer, .DocsLink  {
         width: 90%;
+    }
+
+    .DocsLinkContanier {
+        justify-content: center;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .Title, .SubHeading, .LessonTitelContainer, .VideoContainer, .LessonSummaryContainer {
+    .Title, .SubHeading, .LessonTitelContainer, .VideoContainer, .LessonSummaryContainer, .DocsLink  {
         width: 90%;
+    }
+    .DocsLinkContanier {
+        justify-content: center;
     }
 }
 
@@ -141,9 +176,10 @@
         margin-bottom: 30px;
     }
 
-    .LessonTitelContainer, .LessonSummaryContainer, .VideoContainer {
+    .LessonTitelContainer, .LessonSummaryContainer, .VideoContainer   {
         width: 95%;
     }
+
 
     .LessonTitle {
         font-size: 20px;
@@ -162,6 +198,19 @@
         font-size: 12px;
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    .DocsLinkContanier {
+        justify-content: center;
+    }
+
+    .DocsLink {
+        width: 95%;
+    }
+
+    .DocsButton {
+        width: 90%;
+        margin-left: 20px;
     }
 
     .VideoContainer {
