@@ -1,16 +1,41 @@
 .HeaderContainer {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
     background-color: #ffff;
     box-shadow: 0px 1px 20px 0px #0000001c;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 100;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    transition: all 0.2s;
+    overflow: hidden;
+}
+
+.GrowHeaderContainer {
+    transition: all 1s;
+    z-index: 100;
+    overflow: hidden;
+    height: 95vh;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.HeaderNav {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
 }
 
  .Logo {
-    width: 40px;
-    height: 50px;
+    width: auto;
+    height: 40px;
     margin: 0px;
     padding: 0px;
     margin-left: 50px;
@@ -49,6 +74,76 @@
     display: none;
 }
 
+.DrawerContainer {
+    display: none;
+}
+
+.HideDrawerContainer {
+    overflow: hidden;
+}
+
+.LinksContainer {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.Link {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LinkText {
+    width: 80%;
+    background-color: rgba(128, 128, 128, 0.049);
+    height: 50px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.LogoutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+}
+
+.LogoutButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #812A39;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Logouticon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 20%;
+}
+
+
 @media only screen and (max-width: 500px) {
     .Logo {
         margin-left: 20px;
@@ -71,7 +166,17 @@
     .Button {
         margin-right: 20px;
     }
+
+    .DrawerContainer {
+        transition: all 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        z-index: 999;
+        height: 100vh;
+    }
 }
+
 
 
 @media only screen and (max-width: 1024px) {
@@ -91,6 +196,15 @@
     .MobileNav{
         width: 30px;
         height: 30px;
+    }
+
+    .DrawerContainer {
+        transition: all 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        z-index: 999;
+        height: 100vh;
     }
 
     .Button {

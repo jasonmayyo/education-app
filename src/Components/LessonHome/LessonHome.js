@@ -25,7 +25,8 @@ const Classes = (props) => {
                     frameborder="0" 
                     allow="autoplay; fullscreen; picture-in-picture" 
                     allowfullscreen
-                    title={props.selectedLesson.Title}>
+                    title={props.selectedLesson.Title}
+                    className={classes.Video}>
                 </iframe>
             </div>
                 

@@ -7,7 +7,6 @@ import SelectGrade from '../src/Components/SelectGrade/SelectGrade'
 import SelectSubject from '../src/Components/SelectSubject/SelectSubject'
 import SubjectHome from '../src/Components/SubjectHome/SubjectHome'
 import LessonHome from '../src/Components/LessonHome/LessonHome'
-import Drawer from '../src/Containers/Drawer/Drawer'
 import BackDrop from '../src/Containers/BackDrop/BackDrop'
 import React,{ Component } from 'react';
 import LoadingPage from '../src/Containers/LoadingScreen/LoadingScreen'
@@ -96,18 +95,12 @@ class App extends Component {
                     selectedGrade={this.state.selectedGrade}
                     setDrawer={this.setDrawer}
                     Logout={this.Logout}
-                  />
-                  <Drawer 
                     showDrawer={this.state.showDrawer}
-                    setDrawer={this.setDrawer}
-                    selectedGrade={this.state.selectedGrade}
-                    Logout={this.Logout}
-                    userName={this.state.user.displayName}
                   />
-                  <BackDrop
+                  {/* <BackDrop
                     showDrawer={this.state.showDrawer}
                     setDrawer={this.setDrawer} 
-                  />
+                  /> */}
                     <Switch>
                       <Route exact path="/select-grade">
                           <SelectGrade  

@@ -12,7 +12,7 @@
     font-weight: 600;
     font-size: 72px;
     margin-top: 0px;
-    width: 40%;
+    width: 60%;
     padding: 0px;
 }
 
@@ -24,12 +24,13 @@
     padding-top: 30px;
     padding-left: 20px;
     text-align: left;
-    width: 40%;
+    width: 60%;
     color: grey;
+    padding-top: 100px;
 }
 
 .GradeListContainer {
-    width: 40%;
+    width: 60%;
 }
 
 .Grade:hover .Shevron {
@@ -74,7 +75,7 @@
         margin: 0px;
         margin-bottom: -5px;
         font-weight: 600;
-        padding-top: 30px;
+        padding-top: 100px;
         padding-left: 40px;
         text-align: left;
         width: 100%;

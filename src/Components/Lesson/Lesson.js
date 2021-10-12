@@ -15,7 +15,9 @@ class Lesson extends Component {
                             <p className={classes.LessonTime}>{Lesson.Time}</p>
                             <p className={classes.LessonTitle}>{Lesson.Title}</p>
                         </div>
-                        <img src={PlayButton} alt='Play' className={classes.PlayButton}/>
+                        <div>
+                            <img src={PlayButton} alt='Play' className={classes.PlayButton}/>
+                        </div>
                     </div>
                 </Link>
             ))

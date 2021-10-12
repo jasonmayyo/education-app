@@ -16,7 +16,9 @@ const Login = (props) => {
             </div>
             <div className={classes.LoginFormContainer}>
                 <img src={WBHSLogo} alt="WBHS" className={classes.SchoolLogo}/>
-                <h1 className={classes.LoginTitle}>Login with your school email</h1>
+                <h1 className={classes.LoginTitle}>Login with your school
+                    email
+                </h1>
                 <button className={classes.LoginButton} onClick={props.signin}>
                     <img src={GoogleLogo} className={classes.GoogleLogo} alt='img'/>
                     <p className={classes.LoginButtonText}>Login with Google</p> 
