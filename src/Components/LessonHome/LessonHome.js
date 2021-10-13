@@ -33,7 +33,7 @@ const Classes = (props) => {
             <div className={classes.LessonSummaryContainer}>
                 <h1>Documents</h1>
                     <div className={classes.DocsLinkContanier}>
-                        <a  className={classes.DocsLink} rel="noreferrer"  href='https://seventhstar.co.za/wp-content/uploads/2020/06/LD-GR11S-Electrostatics-Charge-and-Coulombs-Law-of-Elctrostatics.pdf' 
+                        <a  className={classes.DocsLink} rel="noreferrer"  href={props.selectedLesson.Notes}
                             target='_blank'>
                             <div className={classes.DocsButton}>
                                 <img src={LessonNotes} alt='' className={classes.Docimg}/>
@@ -41,7 +41,7 @@ const Classes = (props) => {
                                 <h3 className={classes.DocType}>PDF</h3>
                             </div>
                         </a>
-                        <a  className={classes.DocsLink} rel="noreferrer"  href='https://seventhstar.co.za/wp-content/uploads/2020/06/LD-GR11S-Electrostatics-Charge-and-Coulombs-Law-of-Elctrostatics.pdf' 
+                        <a  className={classes.DocsLink} rel="noreferrer"  href={props.selectedLesson.Worksheet}
                             target='_blank'>
                             <div className={classes.DocsButton}>
                                 <img src={Worksheet} alt='' className={classes.Docimg}/>
@@ -49,7 +49,7 @@ const Classes = (props) => {
                                 <h3 className={classes.DocType}>PDF</h3>
                             </div>
                         </a>
-                        <a  className={classes.DocsLink} rel="noreferrer"  href='https://seventhstar.co.za/wp-content/uploads/2020/06/LD-GR11S-Electrostatics-Charge-and-Coulombs-Law-of-Elctrostatics.pdf' 
+                        <a  className={classes.DocsLink} rel="noreferrer"  href={props.selectedLesson.Memo}
                             target='_blank'>
                             <div className={classes.DocsButton}>
                                 <img src={Memo} alt='' className={classes.Docimg}/>

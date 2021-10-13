@@ -1,9 +1,9 @@
 import React from 'react'
 import classes from './Header.module.css'
-import Logo from '../../Assests/Logo-3.svg'
+import Logo from '../../Assests/WBHS-logo.svg'
 import {Link} from 'react-router-dom'
-import {BiMenu} from 'react-icons/bi'
 import {FiLogOut} from 'react-icons/fi'
+import { Squash as Hamburger } from 'hamburger-react'
 
 
 const Header = (props) => {
@@ -17,7 +17,7 @@ const Header = (props) => {
                         <button className={classes.Button} onClick={props.Logout}>Logout</button>
                     </div>
                     <div className={classes.MobileNavContainer} onClick={props.setDrawer}>
-                        <BiMenu className={classes.MobileNav}/>
+                        <Hamburger className={classes.MobileNav} duration={0.8}/>
                     </div>
                 </div>
                 <div className={classes.DrawerContainer}>

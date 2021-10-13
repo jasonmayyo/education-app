@@ -7,7 +7,6 @@ import SelectGrade from '../src/Components/SelectGrade/SelectGrade'
 import SelectSubject from '../src/Components/SelectSubject/SelectSubject'
 import SubjectHome from '../src/Components/SubjectHome/SubjectHome'
 import LessonHome from '../src/Components/LessonHome/LessonHome'
-import BackDrop from '../src/Containers/BackDrop/BackDrop'
 import React,{ Component } from 'react';
 import LoadingPage from '../src/Containers/LoadingScreen/LoadingScreen'
 
