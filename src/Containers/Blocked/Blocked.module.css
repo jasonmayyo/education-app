@@ -1,0 +1,66 @@
+.Blocked {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Title {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 50px;
+}
+
+.SubTitle {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 50px;
+}
+
+.Button {
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    background-color: #B6354B;
+}
+
+.ButtonTxt {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.ForgotTxt {
+    font-family: 'Poppins', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.ForgotTxt:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px)  {
+    .Button {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 500px)  {
+    .Button {
+        width: 95%;
+    }
+
+}

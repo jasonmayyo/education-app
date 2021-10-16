@@ -31,7 +31,7 @@ const Classes = (props) => {
             </div>
                 
             <div className={classes.LessonSummaryContainer}>
-                <h1>Documents</h1>
+                <h1 className={classes.Documents}>Documents</h1>
                     <div className={classes.DocsLinkContanier}>
                         <a  className={classes.DocsLink} rel="noreferrer"  href={props.selectedLesson.Notes}
                             target='_blank'>

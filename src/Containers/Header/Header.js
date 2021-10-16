@@ -17,7 +17,7 @@ const Header = (props) => {
                         <button className={classes.Button} onClick={props.Logout}>Logout</button>
                     </div>
                     <div className={classes.MobileNavContainer} onClick={props.setDrawer}>
-                        <Hamburger className={classes.MobileNav} duration={0.8}/>
+                        <Hamburger className={classes.MobileNav} duration={0.5} size={20} toggled={props.showDrawer}/>
                     </div>
                 </div>
                 <div className={classes.DrawerContainer}>

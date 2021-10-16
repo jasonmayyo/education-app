@@ -211,6 +211,11 @@
         padding-right: 10px;
     }
 
+    .Documents {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+
     .DocsLinkContanier {
         justify-content: center;
     }
@@ -220,8 +225,7 @@
     }
 
     .DocsButton {
-        width: 90%;
-        margin-left: 20px;
+        width: 100%;
     }
 
     .VideoContainer {
