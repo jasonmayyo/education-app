@@ -59,8 +59,53 @@
 }
 
 @media only screen and (max-width: 500px)  {
-    .Button {
+    .Button, .Title, .SubTitle {
         width: 95%;
     }
 
+    .Title {
+        font-size: 24px;
+    }
+
+    .SubTitle {
+        font-size: 14px;
+        padding-bottom: 30px;
+    }
+
+    .ButtonTxt {
+        font-size: 14px;
+    }
+
+    .Safe {
+        margin-top: 30px;
+    }
+
+    .ForgotTxt {
+        margin-bottom: 30px;
+    }
+
+}
+
+
+@media only screen and (max-width: 350px)  {
+    .Title {
+        font-size: 25px;
+    }
+
+    .SubTitle {
+        font-size: 14px;
+        padding-bottom: 25px;
+    }
+
+    .ButtonTxt {
+        font-size: 14px;
+    }
+
+    .Safe {
+        margin-top: 30px;
+    }
+
+    .ForgotTxt {
+        margin-bottom: 30px;
+    }
 }

@@ -34,7 +34,8 @@ class App extends Component {
     auth.onAuthStateChanged((user) => { 
       this.setState({
         user: user,
-        loading: false
+        loading: false,
+        showDrawer: false
       })
       const useremail = user.email;
       const splitEmail = useremail.split("@");
