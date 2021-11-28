@@ -75,7 +75,7 @@
     }
 
     .LessonNumber {
-        display: none;
+        position: absolute;
     }
 
     .LessonTime {
@@ -98,6 +98,7 @@
         padding: 0px;
         justify-content: center;
         margin-bottom: 5px;
+        position: relative;
     }
 
     .LessonTitleContainer {
@@ -110,7 +111,7 @@
     }
 
     .LessonNumber {
-        display: none;
+       display: none;
     }
 
     .LessonTime {

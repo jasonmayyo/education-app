@@ -1,0 +1,32 @@
+.MonthTitle {
+    font-family: 'Poppins', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    font-size: 72px;
+    font-weight: bold;
+    color: #8080803b;
+    text-align: left;
+    width: 60%;
+}
+
+
+.FolderContainer {
+    display: flex;
+    width: 60%;
+    margin-bottom: 50px;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .MonthTitle {
+        width: 100%;
+        padding-left: 30px;
+        font-size: 60px;
+    }
+
+    .FolderContainer {
+        width: 100%;
+        margin-left: 30px;
+        overflow-x: scroll;
+    }
+}

@@ -1,0 +1,85 @@
+.Link {
+    text-decoration: none;
+    color: black;
+    width: 60%;
+}
+
+.Card {
+    width: 100%;
+    background-color: #1037721f;
+    height: 300px;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.5s;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.Card:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.Banner {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.TitleContainer {
+    width: 100%;
+    background-color: white;
+    height: 90px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 40px;
+}
+
+.Subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: grey;
+    margin: 0px;
+    padding: 0px;
+    margin-top: -8px;
+    padding-left: 42px;
+
+}
+
+
+@media only screen and (max-width: 500px)  {
+    .Link {
+        width: 90%;
+    }
+
+    .Title {
+        font-size: 30px;
+        padding-left: 20px;
+    }
+
+    .Subtitle {
+        padding-left: 22px;
+    }
+
+    .Imgs {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+

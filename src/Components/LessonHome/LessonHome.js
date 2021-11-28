@@ -13,9 +13,7 @@ const Classes = (props) => {
             <div className={classes.LessonTitelContainer}>
                 <h1 className={classes.LessonTitle}>{props.selectedLesson.Title}</h1>
                 <p className={classes.LessonBreadcrums} > 
-                    <Link to='/select-grade' style={{ textDecoration: 'none', color: '#812A39' }}>Grade {props.selectedGrade}</Link>/ 
-                    <Link to={`/${props.selectedGrade}/select-subject`} style={{ textDecoration: 'none', color: '#812A39' }}>{props.selectedSubject.Subject}</Link>/
-                    <Link to={`/${props.selectedGrade}/select-subject`} style={{ textDecoration: 'none', color: '#812A39' }}>{props.selectedLesson.Title}</Link>
+                    <Link to='/select-grade' style={{ textDecoration: 'none', color: '#812A39' }}>Grade {props.selectedGrade}</Link> - <Link to={`/${props.selectedGrade}/select-subject`} style={{ textDecoration: 'none', color: '#812A39' }}>{props.selectedSubject.Subject}</Link> - <Link to={`/${props.selectedGrade}/select-subject`} style={{ textDecoration: 'none', color: '#812A39' }}>{props.selectedLesson.Title}</Link>
                 </p>
             </div>
             <div className={classes.VideoContainer}>

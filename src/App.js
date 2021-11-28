@@ -1,5 +1,6 @@
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect } 
+from 'react-router-dom'
 import Login from '../src/Components/Login/Login'
 
 import Header from '../src/Containers/Header/Header'
@@ -11,9 +12,13 @@ import React,{ Component } from 'react';
 import LoadingPage from '../src/Containers/LoadingScreen/LoadingScreen'
 import Aux from '../src/hoc/Aux'
 import Blocked from '../src/Containers/Blocked/Blocked'
+import Home from '../src/Components/Home/Home'
 
 import {auth} from '../src/Utils/firebase'
 import {provider} from '../src/Utils/firebase'
+import PastPapers from '../src/Components/PastPapers/PastPapers'
+import GradePastPapers from './Components/PastPapers/GradePastPapers/GradePastPapers';
+import PastPaperFolder from '../src/Components/PastPapers/PastPaperFolder/PastPaperFolder'
 
 class App extends Component {
   state = {
@@ -27,7 +32,9 @@ class App extends Component {
     user: null,
     showDrawer: false,
     loading: true,
-    blocked: false
+    blocked: false,
+    selectedYear: '',
+    selectedMonth: ''
   }
 
   componentDidMount = () => {
@@ -99,6 +106,13 @@ class App extends Component {
     })
   }
 
+  selectedYear = (selectedYear, selectedMonth) => {
+    this.setState({
+        selectedYear: selectedYear,
+        selectedMonth: selectedMonth
+    })
+}
+
   Logout = () => {
     auth.signOut()
   }
@@ -119,7 +133,7 @@ class App extends Component {
                       Logout={this.Logout}
                     /> :
                       <Aux>
-                        <Redirect to='/select-grade'/>  
+                        <Redirect to='/'/>
                         <Header 
                           selectedGrade={this.state.selectedGrade}
                           setDrawer={this.setDrawer}
@@ -127,6 +141,36 @@ class App extends Component {
                           showDrawer={this.state.showDrawer}
                         />
                           <Switch>
+
+                            <Route exact path='/'> 
+                              <Home 
+                                  userName={this.state.user.displayName}
+                              />
+                            </Route>
+
+                            <Route exact path='/past-papers'>
+                                <PastPapers 
+                                  userName={this.state.user.displayName}
+                                  setGrade={this.setGradeHandler}
+                                />
+                            </Route>
+
+                            <Route exact path='/past-papers/:grade'>
+                                <GradePastPapers 
+                                  selectedGrade={this.state.selectedGrade}
+                                  setselectedYear={this.selectedYear}
+                                  selectedYear={this.state.selectedYear}
+                                />
+                            </Route>
+
+                            <Route exact path='/past-papers/:grade/:foldername'>
+                              <PastPaperFolder 
+                                  selectedYear={this.state.selectedYear}
+                                  selectedMonth={this.state.selectedMonth}
+                                  selectedGrade={this.state.selectedGrade}
+                              />
+                            </Route>
+
                             <Route exact path="/select-grade">
                                 <SelectGrade  
                                   userName={this.state.user.displayName}

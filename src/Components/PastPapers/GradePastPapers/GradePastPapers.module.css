@@ -1,12 +1,13 @@
-.SelectGradePage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #E8EBF0;
-    padding-bottom: 50px;
-    overflow: hidden;
+.GradePastPapersPage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #E8EBF0;
+        padding-bottom: 50px;
+        overflow: hidden;
 }
+
 
 .Title {
     font-family: 'Poppins', sans-serif;
@@ -32,31 +33,10 @@
     padding-top: 100px;
 }
 
-.GradeListContainer {
-    width: 60%;
-}
-
-
-
-@media only screen and (max-width: 1024px) {
-    .GradeListContainer, .Title, .Welcome {
-        width: 70%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .GradeListContainer, .Title, .Welcome {
-        width: 95%;
-    }
-}
 
 @media only screen and (max-width: 500px) {
-    .GradeListContainer {
-        width: 95%;
-    }
-
     .Title {
-        font-size: 58px;
+        font-size: 50px;
         margin: 5px;
         line-height: 60px;
         padding-bottom: 30px;
@@ -77,4 +57,6 @@
         width: 100%;
         color: grey;
     }
+
+    
 }

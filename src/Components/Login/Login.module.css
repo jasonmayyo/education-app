@@ -1,5 +1,6 @@
 .LoginPage {
     display: flex;
+    background-color: white;
 }
 
 .WavesContainer {
@@ -38,9 +39,11 @@
 }
 
 .SchoolLogo {
-    width: 109px;
-    height: 143px;
+    width: 200px;
+    height: auto;
 }
+
+
 
 .LoginTitle {
     font-family: 'Poppins', sans-serif;
@@ -54,7 +57,7 @@
 
 .LoginButton {
     width: 300px;
-    height: 73px;
+    height: 63px;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -64,9 +67,8 @@
     border: none;
 }
 
-.GoogleLogo {
-    width: 25px;
-    height: 25px;
+.GoogleIcon {
+    font-size: 24px;
 }
 
 .LoginButtonText {
@@ -77,18 +79,18 @@
     font-weight: 600;
 }
 
+
+
 @media only screen and (max-width: 1024px) {
 
     .LoginPage {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         width: 100%;
         height: 100vh;
-        background-image: url('../../Assests/waves-mobile.svg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        background-color: white;
     }
 
     .WavesContainer {
@@ -102,7 +104,6 @@
     .LoginTitle {
         padding-left: 50px;
         padding-right: 50px;
-        color: white;
         font-size: 24px;
     }
 
@@ -110,26 +111,24 @@
         font-size: 15px;
     }
 
-    .GoogleLogo {
-        width: 25px;
-        height: 25px;
-    }
-
     .LoginButton {
-        width: 280px;
+        width: 40%;
         height: 63px;
     }
  
     .LoginFormContainer {
         width: 100%;
-        margin-top: 10vh;
     }
-
-    
 
     .Background {
         display: none;
     }
 
 
+}
+
+@media only screen and (max-width: 600px) {
+    .LoginButton {
+        width: 80%;
+    }
 }

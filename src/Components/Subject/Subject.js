@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './Subject.module.css'
 import {Link} from 'react-router-dom'
-import Shevron from '../../Assests/Right-shevron.svg'
+import Shevron from '../../Assests/play-button2.svg'
 
 const Subject = (props) => {
     return(

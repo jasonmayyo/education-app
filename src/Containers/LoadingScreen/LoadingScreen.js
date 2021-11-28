@@ -1,7 +1,7 @@
 import classes from './LoadingScreen.module.css'
 import React, { useState } from 'react'
 import BarLoader from 'react-spinners/BarLoader'
-import Logo from '../../Assests/WBHS-logo.svg'
+import Logo from '../../Assests/Logo.svg'
 
 const LoadingScreen  = () => {
     const [loading] = useState(true)

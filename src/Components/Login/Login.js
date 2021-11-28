@@ -2,8 +2,8 @@ import React from 'react'
 import classes from './Login.module.css'
 import Waves from '../../Assests/waves.svg'
 import Teacher from '../../Assests/Teacher.svg'
-import GoogleLogo from '../../Assests/google-logo.svg'
-import WBHSLogo from '../../Assests/WBHS-logo.svg'
+import WBHSLogo from '../../Assests/Logo.svg'
+import { FcGoogle } from 'react-icons/fc'
 
 const Login = (props) => {
     return (
@@ -20,7 +20,7 @@ const Login = (props) => {
                     email
                 </h1>
                 <button className={classes.LoginButton} onClick={props.signin}>
-                    <img src={GoogleLogo} className={classes.GoogleLogo} alt='img'/>
+                    <FcGoogle  className={classes.GoogleIcon}/>
                     <p className={classes.LoginButtonText}>Login with Google</p> 
                 </button>
             </div>
